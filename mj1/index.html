@@ -85,7 +85,7 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-                url('https://images.unsplash.com/photo-1594465919760-441fe5908ab0?q=80&w=1920&auto=format&fit=crop');
+                url('https://clydetheatre.com/wp-content/uploads/2025/12/101726-InvincibleMJ-WebsiteTiles-EventsHero-1320x800-1.jpg');
             /* Ye MJ ki iconic silhouette (shadow) wali feel degi */
             background-size: cover;
             background-position: center;
@@ -252,6 +252,64 @@
                 display: none;
             }
         }
+        /* --- FINAL TRIBUTE/LEGACY SECTION STYLE --- */
+.tribute-section {
+    padding: 100px 10%;
+    background: #000; /* Pure Black background as per SS */
+    text-align: center;
+}
+
+.tribute-section h2 {
+    color: #D4AF37; 
+    font-size: 4.5rem; /* Big Bold Heading like your SS */
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+}
+
+.tribute-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    opacity: 0.9;
+}
+
+.tribute-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-family: 'Arial', sans-serif; /* Clean font for readability */
+}
+
+/* Stats Layout Fix */
+.fan-stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.stat-item h3 {
+    color: #D4AF37;
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+.stat-item p {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .fan-stats { flex-direction: column; gap: 40px; }
+}
     </style>
 </head>
 
@@ -332,11 +390,12 @@
                 </p>
                 <p>
                     Despite the controversies, his legacy as a musical genius and a global icon remained intact. He
-                    continued to inspire generations of artists and fans alike. His impact on music, dance, and culture is immeasurable.
+                    continued to inspire generations of artists and fans alike. His impact on music, dance, and culture
+                    is immeasurable.
                 </p>
             </div>
             <div class="media-box">
-                <img src="https://www.rollingstone.com/wp-content/uploads/2018/06/rs-98066-28852137-28852138-large.jpg?w=510"
+                <img src="https://www.rollingstone.com/wp-content/uploads/2018/06/rs-28228-mj-1800-1403154461-87b982ae-163a-4031-89d0-9b833d673bc5.jpg"
                     alt="90s Michael">
             </div>
         </div>
@@ -356,6 +415,10 @@
                 <h3>Billie Jean</h3>
                 <p>1982</p>
             </div>
+            <div class="song-card"><i class="fa-solid fa-heart"></i>
+                <h3>Man in the Mirror</h3>
+                <p>1985</p>
+            </div>
             <div class="song-card"><i class="fa-solid fa-moon"></i>
                 <h3>Smooth Criminal</h3>
                 <p>1987</p>
@@ -364,13 +427,39 @@
                 <h3>Earth Song</h3>
                 <p>1995</p>
             </div>
-            <div class="song-card"><i class="fa-solid fa-heart"></i>
-                <h3>Man In The Mirror</h3>
-                <p>1988</p>
-            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <button
+                style="background: var(--gold); border:none; padding: 10px 20px; font-weight:bold; cursor:pointer;">EXPLORE
+                MORE HITS</button>
         </div>
     </section>
+<section id="tributes" class="tribute-section">
+    <div class="tribute-container">
+        <h2>THE LEGACY</h2>
+        
+        <p class="tribute-quote">"To give someone a piece of your heart, is worth more than all the wealth in the world."</p>
+        
+        <p class="tribute-text">
+            Michael Jackson's impact transcends time. From the streets of Gary, Indiana, to every corner of the globe, his music continues to inspire generations to heal the world and dare to dream. He remains the greatest entertainer to ever grace the stage.
+        </p>
 
+        <div class="fan-stats">
+            <div class="stat-item">
+                <h3>13</h3>
+                <p>GRAMMY AWARDS</p>
+            </div>
+            <div class="stat-item">
+                <h3>750M+</h3>
+                <p>RECORDS SOLD</p>
+            </div>
+            <div class="stat-item">
+                <h3>#1</h3>
+                <p>GREATEST ENTERTAINER</p>
+            </div>
+        </div>
+    </div>
+</section>
     <footer>
         <div class="socials">
             <i class="fab fa-instagram"></i>
