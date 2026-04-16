@@ -310,6 +310,51 @@
 @media (max-width: 768px) {
     .fan-stats { flex-direction: column; gap: 40px; }
 }
+/* Upcoming Biopic Section */
+.biopic-section {
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: #050505; /* Dark background */
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.biopic-content {
+    flex: 1;
+}
+
+.biopic-content h2 {
+    color: #D4AF37;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.biopic-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.biopic-image {
+    flex: 1;
+    border: 2px solid #D4AF37;
+    padding: 10px;
+    background: #111;
+}
+
+.biopic-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .biopic-section { flex-direction: column-reverse; text-align: center; }
+}
     </style>
 </head>
 
@@ -322,7 +367,8 @@
             <a href="#80s">80s Solo King</a>
             <a href="#90s">90s Global Icon</a>
             <a href="#songs">The Hits</a>
-            <a href="#fans">Tributes</a>
+            <a href="#tributes">Tributes</a>
+            <a href="#biopic">Biopic</a>
         </nav>
     </header>
 
@@ -399,6 +445,23 @@
                     alt="90s Michael">
             </div>
         </div>
+        <section id="biopic" class="section">
+    <div class="decade-title">2026</div>
+    <div class="content-flex">
+        <div class="text-box">
+            <h2 class="serif">The Cinematic Return</h2>
+            <p>
+                The legend returns to the big screen. The highly anticipated biopic <b>"Michael"</b> is officially set for a global theatrical release on <b>April 18, 2026</b>. Directed by Antoine Fuqua, the film promises an intimate look at the man behind the legend.
+            </p>
+            <p>
+                Starring <b>Jaafar Jackson</b>—Michael’s own nephew—who perfectly embodies the King of Pop's voice, dance, and spirit. The film will cover his entire life, from the Jackson 5 era to his unrivaled global stardom, featuring over 30 iconic songs.
+            </p>
+        </div>
+        <div class="media-box">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/001-mkt-001-cin-v0009-cnpt-1002.jpg?c=original&q=w_860,c_fill" alt="Michael Biopic 2026">
+        </div>
+    </div>
+</section>
     </section>
     <div class="moonwalk-zone">
         <div class="mj-slide" id="mj-walker">
