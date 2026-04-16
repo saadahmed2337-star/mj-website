@@ -386,60 +386,50 @@
             transition: 0.3s;
         }
 
-        /* Tablet & Mobile Screens (768px and below) */
         @media (max-width: 768px) {
-            .menu-toggle {
+            header {
+                position: relative;
                 display: flex;
+                justify-content: space-between;
+                padding: 20px 5%;
             }
 
-            .nav-links {
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+            }
+
+            .menu-toggle span {
+                width: 25px;
+                height: 3px;
+                background: #D4AF37;
+            }
+
+            nav {
                 display: none;
-                /* Mobile pe default hidden */
-                position: fixed;
-                top: 0;
+                /* Mobile pe default band */
+                position: absolute;
+                top: 100%;
                 left: 0;
                 width: 100%;
-                height: 100vh;
                 background: rgba(0, 0, 0, 0.95);
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                text-align: center;
                 z-index: 1000;
             }
 
-            .nav-links.active {
+            /* Jab click hoga to ye class menu dikhayegi */
+            nav.show {
                 display: flex;
             }
 
-            .nav-links a {
-                font-size: 1.5rem;
-                margin: 20px 0;
-            }
-
-            /* Content Flex Fix (90s & Biopic Section) */
-            .content-flex {
-                flex-direction: column !important;
-                /* Image/Text vertical ho jayenge */
-                text-align: center;
-                gap: 30px;
-            }
-
-            .text-box,
-            .media-box {
-                width: 100% !important;
-                padding: 0;
-            }
-
-            /* Title Font Adjust */
-            .decade-title {
-                font-size: 3.5rem !important;
-                opacity: 0.1;
-            }
-
-            /* Tribute Stats Fix */
-            .fan-stats {
-                flex-direction: column;
-                gap: 40px;
+            nav a {
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+                color: white;
+                display: block;
             }
         }
     </style>
@@ -449,19 +439,19 @@
     <header>
         <div class="logo serif">M J | LEGACY</div>
 
-        <div class="menu-toggle" id="mobile-menu">
+        <div class="menu-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
         <nav id="nav-list">
-            <a href="#70s">70s Jackson 5</a>
-            <a href="#80s">80s Solo King</a>
-            <a href="#90s">90s Global Icon</a>
-            <a href="#biopic">Biopic</a>
-            <a href="#songs">The Hits</a>
-            <a href="#tributes">Tributes</a>
+            <a href="#70s" onclick="toggleMenu()">70s Jackson 5</a>
+            <a href="#80s" onclick="toggleMenu()">80s Solo King</a>
+            <a href="#90s" onclick="toggleMenu()">90s Global Icon</a>
+            <a href="#biopic" onclick="toggleMenu()">Biopic</a>
+            <a href="#songs" onclick="toggleMenu()">The Hits</a>
+            <a href="#tributes" onclick="toggleMenu()">Tributes</a>
         </nav>
     </header>
 
@@ -667,19 +657,29 @@
             ease: "none"
         });
 
-    const menuBtn = document.getElementById('mobile-menu');
-    const navBar = document.querySelector('nav');
+        const menuBtn = document.getElementById('mobile-menu');
+        const navBar = document.querySelector('nav');
 
-    menuBtn.addEventListener('click', () => {
-        navBar.classList.toggle('active');
-    });
-
-    // Link click karte hi menu band
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            navBar.classList.remove('active');
+        menuBtn.addEventListener('click', () => {
+            navBar.classList.toggle('active');
         });
-    });
+
+        // Link click karte hi menu band
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navBar.classList.remove('active');
+            });
+        });
+
+        function toggleMenu() {
+            var menu = document.getElementById("nav-list");
+            // Agar menu band hai to 'show' class laga do, warna hata do
+            if (menu.classList.contains("show")) {
+                menu.classList.remove("show");
+            } else {
+                menu.classList.add("show");
+            }
+        }
 
     </script>
 </body>
