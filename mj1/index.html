@@ -53,6 +53,25 @@
             background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+
+            header {
+                position: fixed;
+                /* Ye Navbar ko upar chipkaye rakhega */
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 2000;
+                /* Taaki ye har cheez ke upar rahe */
+                background: rgba(0, 0, 0, 0.9);
+                /* Thoda transparent black */
+                backdrop-filter: blur(10px);
+                /* Modern glass look */
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 5%;
+                align-items: center;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            }
         }
 
         .logo {
