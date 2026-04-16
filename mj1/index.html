@@ -451,6 +451,22 @@
                 display: block;
             }
         }
+        @media (max-width: 768px) {
+    nav {
+        position: fixed; /* Scroll ke sath menu bhi move kare */
+        top: 70px; /* Header ke theek niche se shuru ho */
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav.show {
+        display: flex;
+    }
+}
     </style>
 </head>
 
