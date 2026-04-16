@@ -252,124 +252,216 @@
                 display: none;
             }
         }
+
         /* --- FINAL TRIBUTE/LEGACY SECTION STYLE --- */
-.tribute-section {
-    padding: 100px 10%;
-    background: #000; /* Pure Black background as per SS */
-    text-align: center;
-}
+        .tribute-section {
+            padding: 100px 10%;
+            background: #000;
+            /* Pure Black background as per SS */
+            text-align: center;
+        }
 
-.tribute-section h2 {
-    color: #D4AF37; 
-    font-size: 4.5rem; /* Big Bold Heading like your SS */
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
-    text-transform: uppercase;
-}
+        .tribute-section h2 {
+            color: #D4AF37;
+            font-size: 4.5rem;
+            /* Big Bold Heading like your SS */
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+        }
 
-.tribute-quote {
-    font-size: 1.4rem;
-    font-style: italic;
-    color: #fff;
-    margin-bottom: 30px;
-    font-family: 'Playfair Display', serif;
-    opacity: 0.9;
-}
+        .tribute-quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #fff;
+            margin-bottom: 30px;
+            font-family: 'Playfair Display', serif;
+            opacity: 0.9;
+        }
 
-.tribute-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #fff;
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-    font-family: 'Arial', sans-serif; /* Clean font for readability */
-}
+        .tribute-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            font-family: 'Arial', sans-serif;
+            /* Clean font for readability */
+        }
 
-/* Stats Layout Fix */
-.fan-stats {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 60px;
-}
+        /* Stats Layout Fix */
+        .fan-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 60px;
+        }
 
-.stat-item h3 {
-    color: #D4AF37;
-    font-size: 3.5rem;
-    margin-bottom: 5px;
-    font-family: 'Playfair Display', serif;
-}
+        .stat-item h3 {
+            color: #D4AF37;
+            font-size: 3.5rem;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
 
-.stat-item p {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-}
+        .stat-item p {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
 
-@media (max-width: 768px) {
-    .fan-stats { flex-direction: column; gap: 40px; }
-}
-/* Upcoming Biopic Section */
-.biopic-section {
-    padding: 80px 10%;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    background: #050505; /* Dark background */
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
-}
+        @media (max-width: 768px) {
+            .fan-stats {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
 
-.biopic-content {
-    flex: 1;
-}
+        /* Upcoming Biopic Section */
+        .biopic-section {
+            padding: 80px 10%;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: #050505;
+            /* Dark background */
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
 
-.biopic-content h2 {
-    color: #D4AF37;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
-}
+        .biopic-content {
+            flex: 1;
+        }
 
-.biopic-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ccc;
-    margin-bottom: 20px;
-}
+        .biopic-content h2 {
+            color: #D4AF37;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
 
-.biopic-image {
-    flex: 1;
-    border: 2px solid #D4AF37;
-    padding: 10px;
-    background: #111;
-}
+        .biopic-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
 
-.biopic-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
+        .biopic-image {
+            flex: 1;
+            border: 2px solid #D4AF37;
+            padding: 10px;
+            background: #111;
+        }
 
-@media (max-width: 768px) {
-    .biopic-section { flex-direction: column-reverse; text-align: center; }
-}
+        .biopic-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .biopic-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+        }
+
+        /* --- UNIVERSAL RESPONSIVE STYLES --- */
+
+        /* Hamburger Button (Sirf mobile pe dikhega) */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: #D4AF37;
+            transition: 0.3s;
+        }
+
+        /* Tablet & Mobile Screens (768px and below) */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                /* Mobile pe default hidden */
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+                margin: 20px 0;
+            }
+
+            /* Content Flex Fix (90s & Biopic Section) */
+            .content-flex {
+                flex-direction: column !important;
+                /* Image/Text vertical ho jayenge */
+                text-align: center;
+                gap: 30px;
+            }
+
+            .text-box,
+            .media-box {
+                width: 100% !important;
+                padding: 0;
+            }
+
+            /* Title Font Adjust */
+            .decade-title {
+                font-size: 3.5rem !important;
+                opacity: 0.1;
+            }
+
+            /* Tribute Stats Fix */
+            .fan-stats {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <header>
         <div class="logo serif">M J | LEGACY</div>
-        <nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-list">
             <a href="#70s">70s Jackson 5</a>
             <a href="#80s">80s Solo King</a>
             <a href="#90s">90s Global Icon</a>
             <a href="#biopic">Biopic</a>
             <a href="#songs">The Hits</a>
             <a href="#tributes">Tributes</a>
-            
         </nav>
     </header>
 
@@ -447,22 +539,27 @@
             </div>
         </div>
         <section id="biopic" class="section">
-    <div class="decade-title">2026</div>
-    <div class="content-flex">
-        <div class="text-box">
-            <h2 class="serif">The Cinematic Return</h2>
-            <p>
-                The legend returns to the big screen. The highly anticipated biopic <b>"Michael"</b> is officially set for a global theatrical release on <b>April 18, 2026</b>. Directed by Antoine Fuqua, the film promises an intimate look at the man behind the legend.
-            </p>
-            <p>
-                Starring <b>Jaafar Jackson</b>—Michael’s own nephew—who perfectly embodies the King of Pop's voice, dance, and spirit. The film will cover his entire life, from the Jackson 5 era to his unrivaled global stardom, featuring over 30 iconic songs.
-            </p>
-        </div>
-        <div class="media-box">
-            <img src="https://media.cnn.com/api/v1/images/stellar/prod/001-mkt-001-cin-v0009-cnpt-1002.jpg?c=original&q=w_860,c_fill" alt="Michael Biopic 2026">
-        </div>
-    </div>
-</section>
+            <div class="decade-title">2026</div>
+            <div class="content-flex">
+                <div class="text-box">
+                    <h2 class="serif">The Cinematic Return</h2>
+                    <p>
+                        The legend returns to the big screen. The highly anticipated biopic <b>"Michael"</b> is
+                        officially set for a global theatrical release on <b>April 18, 2026</b>. Directed by Antoine
+                        Fuqua, the film promises an intimate look at the man behind the legend.
+                    </p>
+                    <p>
+                        Starring <b>Jaafar Jackson</b>—Michael’s own nephew—who perfectly embodies the King of Pop's
+                        voice, dance, and spirit. The film will cover his entire life, from the Jackson 5 era to his
+                        unrivaled global stardom, featuring over 30 iconic songs.
+                    </p>
+                </div>
+                <div class="media-box">
+                    <img src="https://media.cnn.com/api/v1/images/stellar/prod/001-mkt-001-cin-v0009-cnpt-1002.jpg?c=original&q=w_860,c_fill"
+                        alt="Michael Biopic 2026">
+                </div>
+            </div>
+        </section>
     </section>
     <div class="moonwalk-zone">
         <div class="mj-slide" id="mj-walker">
@@ -498,32 +595,35 @@
                 MORE HITS</button>
         </div>
     </section>
-<section id="tributes" class="tribute-section">
-    <div class="tribute-container">
-        <h2>THE LEGACY</h2>
-        
-        <p class="tribute-quote">"To give someone a piece of your heart, is worth more than all the wealth in the world."</p>
-        
-        <p class="tribute-text">
-            Michael Jackson's impact transcends time. From the streets of Gary, Indiana, to every corner of the globe, his music continues to inspire generations to heal the world and dare to dream. He remains the greatest entertainer to ever grace the stage.
-        </p>
+    <section id="tributes" class="tribute-section">
+        <div class="tribute-container">
+            <h2>THE LEGACY</h2>
 
-        <div class="fan-stats">
-            <div class="stat-item">
-                <h3>13</h3>
-                <p>GRAMMY AWARDS</p>
-            </div>
-            <div class="stat-item">
-                <h3>750M+</h3>
-                <p>RECORDS SOLD</p>
-            </div>
-            <div class="stat-item">
-                <h3>#1</h3>
-                <p>GREATEST ENTERTAINER</p>
+            <p class="tribute-quote">"To give someone a piece of your heart, is worth more than all the wealth in the
+                world."</p>
+
+            <p class="tribute-text">
+                Michael Jackson's impact transcends time. From the streets of Gary, Indiana, to every corner of the
+                globe, his music continues to inspire generations to heal the world and dare to dream. He remains the
+                greatest entertainer to ever grace the stage.
+            </p>
+
+            <div class="fan-stats">
+                <div class="stat-item">
+                    <h3>13</h3>
+                    <p>GRAMMY AWARDS</p>
+                </div>
+                <div class="stat-item">
+                    <h3>750M+</h3>
+                    <p>RECORDS SOLD</p>
+                </div>
+                <div class="stat-item">
+                    <h3>#1</h3>
+                    <p>GREATEST ENTERTAINER</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <footer>
         <div class="socials">
             <i class="fab fa-instagram"></i>
@@ -566,6 +666,21 @@
             x: window.innerWidth + 200,
             ease: "none"
         });
+
+    const menuBtn = document.getElementById('mobile-menu');
+    const navBar = document.querySelector('nav');
+
+    menuBtn.addEventListener('click', () => {
+        navBar.classList.toggle('active');
+    });
+
+    // Link click karte hi menu band
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            navBar.classList.remove('active');
+        });
+    });
+
     </script>
 </body>
 
