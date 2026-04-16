@@ -451,22 +451,78 @@
                 display: block;
             }
         }
-        @media (max-width: 768px) {
-    nav {
-        position: fixed; /* Scroll ke sath menu bhi move kare */
-        top: 70px; /* Header ke theek niche se shuru ho */
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        display: none;
-        flex-direction: column;
-        text-align: center;
-    }
 
-    nav.show {
-        display: flex;
-    }
-}
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                /* Scroll ke sath menu bhi move kare */
+                top: 70px;
+                /* Header ke theek niche se shuru ho */
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                display: none;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav.show {
+                display: flex;
+            }
+        }
+
+        /* --- FIXED & RESPONSIVE FIX --- */
+        header {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background: #000;
+            border-bottom: 1px solid #D4AF37;
+        }
+
+        body {
+            padding-top: 80px;
+        }
+
+        /* Navbar ke liye jagah */
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex !important;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+            }
+
+            .menu-toggle span {
+                width: 25px;
+                height: 3px;
+                background: #D4AF37;
+            }
+
+            nav {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            nav.show {
+                display: flex !important;
+            }
+
+            nav a {
+                margin: 15px 0;
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -715,7 +771,23 @@
                 menu.classList.add("show");
             }
         }
+        // Menu toggle function
+        function toggleMenu() {
+            const menu = document.querySelector('nav');
+            menu.classList.toggle('show');
+        }
 
+        // Hamburger button click event
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.querySelector('.menu-toggle');
+            if (toggleBtn) {
+                toggleBtn.onclick = toggleMenu;
+            }
+
+            // Link click pe menu band karne ke liye
+            const links = document.querySelectorAll('nav a');
+            links.forEach(l => l.onclick = () => document.querySelector('nav').classList.remove('show'));
+        });
     </script>
 </body>
 
